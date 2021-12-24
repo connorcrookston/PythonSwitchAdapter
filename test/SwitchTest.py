@@ -31,9 +31,21 @@ class TestSwitch(unittest.TestCase):
         self.assertTrue(self.switch.can_play(hand, target))
 
 
+    def test_can_play_alt(self):
+        hand = ["H3","HK","C2"]
+        target = ["S2"]
+        self.assertTrue(self.switch.can_play(hand, target))
+
+
     def test_can_play_card(self):
         card = "C8"
         target = ["C7"]
+        self.assertTrue(self.switch.can_play_card(card, target))
+
+
+    def test_can_play_card_alt(self):
+        card = "s5"
+        target = ["C5"]
         self.assertTrue(self.switch.can_play_card(card, target))
 
 
